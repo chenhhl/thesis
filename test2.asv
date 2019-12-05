@@ -11,12 +11,9 @@ r3=imread('C:\Users\Holly Chen\Dropbox (MIT)\MIT_Group_HollyChen\Holly_vein_proj
 w2=imread('C:\Users\Holly Chen\Dropbox (MIT)\MIT_Group_HollyChen\Holly_vein_project\Raw_Img\112119_RGB\w2.tiff');
 w3=imread('C:\Users\Holly Chen\Dropbox (MIT)\MIT_Group_HollyChen\Holly_vein_project\Raw_Img\112119_RGB\w3.tiff');
 
-figure;
-montage({b2,gg2,r2new,w2},'size',[1,4]);
-montage({b2,g2,r2,w2},'size',[1,4]);
-montage({b2,g2,r2,w2},'size',[1,4],'displayrange',[20,100]);
+montage({b2,g2,r2,w2},'size',[1,4],'displayrange',50-);
 
-imshowpair(b2,g2);
+imshowpair(b2,g2,'montage');
 mask=getrect();
 b2 = imcrop(b2,mask);
 g2 = imcrop(g2,mask);
@@ -26,12 +23,12 @@ w2 = imcrop(w2,mask);
 figure;
 montage({b3,g3,r3,w3},'size',[1,4]);
 
-imshowpair(b3,g3);
-mask3=getrect();
-b3 = imcrop(b3,mask3);
-g3 = imcrop(g3,mask3);
-r3 = imcrop(r3,mask3);
-w3 = imcrop(w3,mask3);
+imshowpair(b3,g3,'montage');
+mask=getrect();
+b3 = imcrop(b3,mask);
+g3 = imcrop(g3,mask);
+r3 = imcrop(r3,mask);
+w3 = imcrop(w3,mask);
 
 
 
