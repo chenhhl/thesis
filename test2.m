@@ -33,6 +33,9 @@ imagesc(IM3)
 max(max(IM3))
 
 figure;
+
+%% add test changes
+x = 1;
 [~,threshold] = edge(vein,'sobel');
 fudgeFactor = 0.5;
 BWs = edge(vein,'sobel',threshold * fudgeFactor);
